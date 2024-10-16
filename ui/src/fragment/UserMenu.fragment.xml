@@ -1,0 +1,6 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml">
+  <ActionSheet showCancelButton="true" id="usermenu" placement="Bottom">
+    <Button icon="sap-icon://account" text="{i18n>USER_PROFILE}" press="showUserProfile" />
+    <Button icon="sap-icon://log" text="{i18n>USER_LOGOUT}" press="doLogout" />
+  </ActionSheet>
+</core:FragmentDefinition>

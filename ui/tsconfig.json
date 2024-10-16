@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ES2022",
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "preserveConstEnums": true,
+    "inlineSourceMap": true,
+    "allowJs": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": false,
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "paths": {
+      "com/bosch/Test1016/ui/*": [
+        "./src/*"
+      ]
+    },
+    "typeRoots": [
+      "./node_modules/@types",
+      "./node_modules"
+    ],
+    "types": [
+      "@sapui5/ts-types-esm"
+    ],
+  },
+  "include": [
+    "./src/**/*"
+  ],
+}

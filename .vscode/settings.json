@@ -1,0 +1,12 @@
+{
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "prettier.singleQuote": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "prettier.printWidth": 80,
+}

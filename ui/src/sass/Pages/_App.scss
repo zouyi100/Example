@@ -1,0 +1,134 @@
+// global style configure for application
+.customize-object-dynamic-page {
+  .sapFDynamicPageHeader {
+    background: none;
+  }
+
+  .sapFDynamicPageContent,
+  .sapFDynamicPageHeader,
+  .sapUxAPObjectPageHeaderContent,
+  .sapFDynamicPageContentFitContainer {
+    padding: 0 !important;
+  }
+
+  .sapUxAPObjectPageHeaderTitleTextWrappable {
+    font-size: 1.8rem;
+  }
+
+  // fix page height bug
+  .sapFDynamicPage {
+    height: calc(100% - 8px);
+    overflow: hidden;
+  }
+
+  .sapUxAPObjectPageSection {
+    min-height: 100%;
+    position: relative;
+    .sapUxAPObjectPageSeRctionContainer {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+    }
+  }
+
+  .sapUxAPObjectPageSubSection {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+  }
+
+  .sapUxAPBlockContainer {
+    height: 100%;
+    position: relative;
+  }
+
+  .sapUxAPObjectPageScroll {
+    height: 100%;
+    .sapUxAPObjectPageContainer {
+      height: calc(100% - 50px);
+      overflow: hidden;
+    }
+  }
+
+  .sapUxAPObjectPageSection {
+    .sapUiRespGrid {
+      height: 100%;
+      > div {
+        height: 100%;
+      }
+    }
+  }
+
+  .sapFDynamicPageContent {
+    background-color: white !important;
+    > div {
+      height: 100% !important;
+    }
+  }
+
+  .sapFDynamicPageContentWrapper {
+    overflow: hidden !important;
+  }
+
+  .sapUiViewDisplayBlock {
+    height: 100%;
+  }
+}
+
+.page-root {
+  height: initial !important;
+  min-height: 100%;
+}
+
+.sapMPageHeader {
+  display: none;
+}
+section[role="main"] {
+  top: 0 !important;
+  bottom: 0;
+  transition: bottom 0.4s;
+}
+.sapMPageFooter {
+  height: 72px;
+  z-index: 10 !important;
+  background-color: white;
+  transition: height 0.35s;
+  div[role="toolbar"] {
+    height: 100%;
+    opacity: 1;
+    transition: opacity 0.35s;
+  }
+  &.sapUiHidden {
+    height: 0 !important;
+    bottom: 0 !important;
+    top: initial;
+    visibility: visible;
+    div[role="toolbar"] {
+      opacity: 0;
+    }
+  }
+}
+.sapMPageWithFooter {
+  & > section[role="main"] {
+    bottom: 72px;
+  }
+}
+
+.app-content {
+  .sapTntToolPageHeader {
+    height: 70px !important;
+    & > .sapTntToolHeader {
+      padding: 0 !important;
+      overflow: visible !important;
+    }
+  }
+
+  .sapTntToolPageMainContentWrapper {
+    .sapMScrollContScroll {
+      height: 100%;
+    }
+  }
+}

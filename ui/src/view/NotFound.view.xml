@@ -1,0 +1,4 @@
+<mvc:View controllerName="com.bosch.Test1016.ui.controller.NotFound"
+  xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+  <MessagePage visible="{NotFoundModel>/showNoAccess}" showHeader="false" icon="sap-icon://locked" text="No Access" description="The URL is invalid or you don't have the permission."/>
+</mvc:View>

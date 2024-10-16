@@ -1,0 +1,11 @@
+{
+  "name": "Test1016Project",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "mbt build -m verbose",
+    "install-ui": "cd ui && npm install"
+  },
+  "devDependencies": {
+    "mbt": "1.2.21"
+  }
+}

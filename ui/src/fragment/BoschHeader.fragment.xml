@@ -1,0 +1,7 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml">
+  <VBox class="bosch-header">
+    <html:div class="bosch-tab" style="display: flex; height: 6px;">
+      <Image alt="assets/bosch_header_tab.png" src="assets/bosch_header_tab.png" width="100%" height="6px" mode="Image" backgroundSize="cover" backgroundPosition="initial" backgroundRepeat="no-repeat"></Image>
+    </html:div>
+  </VBox>
+</core:FragmentDefinition>

@@ -1,0 +1,18 @@
+<mvc:View controllerName="com.bosch.Test1016.ui.controller.Welcome"
+  xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m"
+  xmlns:sbs="com.bosch.Test1016.ui.libs.controls">
+  <Page showHeader="false" class="pages page-welcome">
+    <sbs:Div class="welcome-inner">
+      <sbs:Div class="logo-block">
+        <Image class="logo" alt="assets/appLogo.svg" src="assets/appLogo.svg" height="60px"
+          width="900px" />
+      </sbs:Div>
+      <sbs:Div class="indicator-block">
+        <sbs:Div class="activity-indicator">
+          <sbs:Div class="activity-indicator__top-box"></sbs:Div>
+          <sbs:Div class="activity-indicator__bottom-box"></sbs:Div>
+        </sbs:Div>
+      </sbs:Div>
+    </sbs:Div>
+  </Page>
+</mvc:View>

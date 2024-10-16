@@ -1,0 +1,23 @@
+# build results
+webapp
+dist
+ui-content.zip
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+resources/
+mta_archives/
+
+.DS_Store
+.vscode/diff
+
+# do not add dependency lock files to this repo because it should remain independent from specific dependency managers
+package-lock.json
+yarn.lock

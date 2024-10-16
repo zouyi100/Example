@@ -1,0 +1,13 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+  <FlexBox class="left">
+    <Text class="footer-item" text="© Robert Bosch GmbH 2022, all rights reserved"></Text>
+    <Link class="footer-item useful-link" href="https://www.bosch.com/corporate-information/?prevent-auto-open-privacy-settings=1" target="_blank" text="Corporate information"></Link>
+    <Link class="footer-item useful-link" href="https://www.bosch.com/data-protection-notice/?prevent-auto-open-privacy-settings=1" target="_blank" text="Privacy Policy"></Link>
+    <Link class="footer-item useful-link" target="_blank" text="Privacy Settings"></Link>
+    <Link class="footer-item useful-link" target="_blank" text="Terms of Use"></Link>
+  </FlexBox>
+
+  <FlexBox class="right">
+    <Text class="footer-item system-profile" text="Test1016 V1.0.0 Test-System"></Text>
+  </FlexBox>
+</core:FragmentDefinition>

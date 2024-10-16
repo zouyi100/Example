@@ -1,0 +1,146 @@
+{
+  "_version": "1.12.0",
+  "sap.app": {
+    "id": "com.bosch.Test1016.ui",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "1.0.0"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "ach": "ach",
+    "sourceTemplate": {
+      "id": "html5moduletemplates.basicSAPUI5ApplicationProjectModule",
+      "version": "1.40.12"
+    },
+    "sbsTemplate": {
+      "version": 5
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": false,
+    "rootView": {
+      "viewName": "com.bosch.Test1016.ui.view.Empty",
+      "type": "XML",
+      "async": true,
+      "id": "Empty"
+    },
+    "dependencies": {
+      "minUI5Version": "1.104.0",
+      "libs": {
+        "sap.ui.core": {},
+        "sap.m": {},
+        "sap.f": {},
+        "sap.ui.layout": {},
+        "sap.tnt": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "com.bosch.Test1016.ui.i18n.i18n"
+        }
+      },
+      "store": {
+        "type": "sap.ui.model.json.JSONModel",
+        "settings": {},
+        "preload": true,
+        "uri": "model/store.json"
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "com.bosch.Test1016.ui.view",
+        "controlAggregation": "pages",
+        "controlId": "root",
+        "clearControlAggregation": false,
+        "bypassed": {
+          "target": "NotFound"
+        }
+      },
+      "routes": [
+        {
+          "name": "welcome",
+          "pattern": "welcome",
+          "target": [
+            "Welcome"
+          ]
+        }
+      ],
+      "targets": {
+        "Empty": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewName": "Empty",
+          "viewLevel": 1
+        },
+        "NotFound": {
+          "viewType": "XML",
+          "transition": "fade",
+          "clearControlAggregation": true,
+          "viewId": "NotFound",
+          "viewName": "NotFound",
+          "viewLevel": 2
+        },
+        "Welcome": {
+          "viewType": "XML",
+          "viewName": "Welcome",
+          "transition": "fade",
+          "clearControlAggregation": false,
+          "viewLevel": 2
+        },
+        "App": {
+          "viewType": "XML",
+          "transition": "slide",
+          "viewName": "App",
+          "clearControlAggregation": false,
+          "viewLevel": 2
+        },
+        "Home": {
+          "viewType": "XML",
+          "transition": "slide",
+          "viewName": "Home",
+          "clearControlAggregation": false,
+          "controlId": "app",
+          "controlAggregation": "pages",
+          "parent": "App",
+          "viewLevel": 3
+        }
+      }
+    }
+  }
+}

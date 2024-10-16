@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBoxs="0 0 900 100">
+  <defs>
+    <linearGradient id="gradient">
+      <stop offset="0" stop-color="#902337" />
+      <stop offset="0.11" stop-color="#AF2B42" />
+      <stop offset="0.2" stop-color="#BC283A" />
+      <stop offset="0.3" stop-color="#DA2228" />
+      <stop offset="0.4" stop-color="#5D4399" />
+      <stop offset="0.57" stop-color="#224292" />
+      <stop offset="0.71" stop-color="#2C6B6F" />
+      <stop offset="0.85" stop-color="#7FBE78" />
+      <stop offset="1" stop-color="#35934B" />
+    </linearGradient>
+  </defs>
+  <text id="text" x="450" y="50" font-size="50px"
+    font-family="Arial" text-anchor="middle" fill="url(#gradient)">Test1016</text>
+</svg>

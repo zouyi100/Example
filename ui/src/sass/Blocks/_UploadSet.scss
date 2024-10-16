@@ -1,0 +1,20 @@
+.sbs-upload-set {
+  .sapMIllustratedMessage {
+    .sapMIllustratedMessageMainContent {
+      .sapMIllustration {
+        height: 8rem !important;
+      }
+      & > figcaption {
+        .sapMTitle {
+          margin-top: 0 !important;
+        }
+        .sapMText {
+          margin-bottom: 0 !important;
+        }
+      }
+    }
+    .sapMIllustratedMessageAdditionalContent {
+      display: none;
+    }
+  }
+}

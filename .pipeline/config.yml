@@ -1,0 +1,57 @@
+general:
+  inferBuildTool: false
+  collectTelemetryData: false
+  verbose: false
+
+steps:
+  artifactPrepareVersion:
+    versioningType: cloud_noTag
+  npmExecuteLint:
+      failOnError: true
+  sonarExecuteScan:
+    inferBranchName: true
+    coverageExclusions:
+      - '**/controller/**'
+      - '**/libs/**'
+      - '**/coverage/**'
+      - '*test*'
+    projectKey: 'com.bosch.Test1016'
+    instance: 'MySonar'
+    sonarTokenCredentialsId: 'sonarToken'
+    options:
+      - 'sonar.sources=.'
+      - 'sonar.projectVersion=1.0'
+      - 'sonar.javascript.lcov.reportPaths=ui/coverage/lcov.info'
+      - 'sonar.inclusions=**/unit.js'
+  mailSendNotification:
+    notificationAttachment: false
+    notificationRecipients: 'chao.chen4@cn.bosch.com'
+    notifyCulprits: false
+    numLogLinesInBody: 0
+    wrapInNode: false
+  cloudFoundryDeploy:
+    deployTool: 'mtaDeployPlugin'
+    deployType: 'standard'
+    cloudFoundry:
+      apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
+      org: 'Robert_Bosch_GmbH_bosch-cidae4-s4x-dev'
+      space: 'BT001S01'
+      credentialsId: 'scp-user-pipeline'
+  # tmsUpload:
+  #   nodeName: '{yourTransportNodeName}'
+  #   credentialsId: 'tms_serviceKey'
+  #   customDescription: 'TMS_{yourProjectName}'
+  #   proxy: 'http://rb-proxy-unix-de01.bosch.com:8080'
+
+stages:
+  Init:
+    buildTool: 'npm'
+  'Pull-Request Voting':
+    buildTool: 'npm'
+    npmRunScripts: 
+      - 'qunit'
+      - 'qunit-coverage'
+    sonarExecuteScan: true
+  Build:
+    buildTool: 'mta'
+  Release:

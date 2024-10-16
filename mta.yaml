@@ -1,0 +1,73 @@
+_schema-version: '3.2'
+ID: Test1016
+version: 1.0.0
+modules:
+  - name: Test1016-approuter
+    type: approuter.nodejs
+    path: approuter
+    requires:
+      - name: rb-sbs-shared1_html5-apps-repo_app-runtime_8
+      - name: rb-sbs-shared1_xsuaa1_application_4
+        group: destinations
+        properties:
+          name: 'BackendService'
+          url: 'https://Test1016-bosch-service-d.cfapps.eu10.hana.ondemand.com'
+          forwardAuthToken: true
+    parameters:
+      disk-quota: 256M
+      memory: 256M
+      host: Test1016-bosch-d
+  - name: Test1016_ui_deployer
+    type: com.sap.application.content
+    path: .
+    requires:
+      - name: rb-sbs-shared1_html5-apps-repo_app-host_8
+        parameters:
+          content-target: true
+    build-parameters:
+      build-result: resources
+      requires:
+        - artifacts:
+            - ui-content.zip
+          name: ui
+          target-path: resources/
+  - name: ui
+    type: html5
+    path: ui
+    build-parameters:
+      builder: custom
+      commands:
+        - npm run build
+      supported-platforms: []
+  - name: Test1016-service
+    type: nodejs
+    path: server
+    build-parameters:
+      builder: npm
+    parameters:
+      memory: 2048M
+      disk-quota: 2048M
+      buildpack: nodejs_buildpack
+      stack: cflinuxfs4
+      routes:
+        - route: Test1016-bosch-service-d.cfapps.eu10.hana.ondemand.com
+resources:
+  - name: rb-sbs-shared1_html5-apps-repo_app-runtime_8
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: html5-apps-repo
+      service-plan: app-runtime
+  - name: rb-sbs-shared1_html5-apps-repo_app-host_8
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: html5-apps-repo
+      service-plan: app-host
+  - name: rb-sbs-shared1_xsuaa1_application_4
+    type: org.cloudfoundry.existing-service
+    parameters:
+      service-name: rb-sbs-shared1_xsuaa1_application_4
+build-parameters:
+  before-all:
+    - builder: custom
+      commands:
+        - npm run install-ui

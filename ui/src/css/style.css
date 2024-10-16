@@ -1,0 +1,445 @@
+.page-header {
+  margin-left: 0 !important;
+  width: 100%;
+}
+.page-header .shell-bar {
+  background-color: #fff;
+  box-shadow: 0px 1px 1px 0px #ccc;
+  padding: 0 5px;
+  z-index: 5;
+  position: initial;
+}
+.page-header .shell-bar .left {
+  margin-left: 4px;
+}
+.page-header .shell-bar .left .logo {
+  margin-left: 15px;
+}
+.page-header .shell-bar .left .logo .sapMFlexItem {
+  display: flex;
+  align-items: center;
+}
+.page-header .shell-bar .left .title {
+  margin-left: 60px;
+}
+.page-header .shell-bar .left .title span {
+  color: #32363a;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.page-header .shell-bar .left .hello {
+  margin-left: 1.5rem;
+  color: #32363a;
+  font-size: 12px;
+}
+.page-header .shell-bar .left .menu-bar {
+  border: none;
+  box-shadow: none;
+}
+.page-header .shell-bar .left .menu-bar .sapMITBText {
+  color: #32363a !important;
+  font-weight: bold;
+}
+.page-header .shell-bar .left .menu-bar .sapMITBText:hover {
+  color: #32363a;
+}
+.page-header .shell-bar .left .menu-bar .sapMITBSelected .sapMITBText {
+  color: #d1e8ff !important;
+}
+.page-header .shell-bar .left .menu-bar .sapMITBSelected .sapMITBContentArrow {
+  height: 0.7rem !important;
+}
+.page-header .shell-bar .left .menu-bar .sapMITBSelected .sapMITBContentArrow::after {
+  background-color: #d1e8ff !important;
+}
+.page-header .shell-bar .right {
+  position: initial;
+  margin-right: 15px;
+}
+.page-header .shell-bar .right .title {
+  margin-right: 1.5rem;
+}
+.page-header .shell-bar .right .title span {
+  color: #32363a;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.page-header .shell-bar .right .hello {
+  color: #32363a;
+  font-size: 12px;
+}
+.page-header .shell-bar .right .user-menu-btn {
+  margin-left: 10px;
+}
+.page-header .shell-bar .right .user-menu-btn .sapUiIcon {
+  color: #32363a;
+}
+.page-header .shell-bar .right .user-menu-btn span {
+  color: #32363a;
+}
+.page-header .shell-bar .customize-btn:hover .sapMBtnInner {
+  background-color: #eaeaea !important;
+}
+.page-header .shell-bar .customize-btn .sapMBtnInner {
+  border-radius: 50% !important;
+  transition: all 0.3s !important;
+}
+.page-header .shell-bar .customize-btn .sapMBtnInner:hover {
+  background-color: #eaeaea !important;
+}
+.page-header .shell-bar .customize-btn > .sapMBtnInner::before {
+  display: none;
+}
+.page-header .shell-bar .customize-btn .sapUiIcon {
+  color: #333 !important;
+}
+.page-header .shell-bar .customize-btn span {
+  color: #333 !important;
+}
+.page-header .shell-bar .footer-toggle-btn-block {
+  position: absolute;
+  width: 40px;
+  height: 35px;
+  bottom: -1px;
+  right: 5px;
+  border-radius: 5px 5px 0 0;
+  background-color: white;
+  border: 1px solid #d9d9d9;
+  border-bottom: none;
+  box-sizing: border-box;
+  opacity: 0.4;
+  transition: all 0.25s;
+}
+.page-header .shell-bar .footer-toggle-btn-block:hover {
+  opacity: 1;
+  height: 40px;
+}
+.page-header .shell-bar .footer-toggle-btn-block .sapMFlexItem {
+  width: 100%;
+  height: 100%;
+}
+.page-header .shell-bar .footer-toggle-btn-block .sapMFlexItem .footer-toggle-btn {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: initial !important;
+}
+.page-header .shell-bar .footer-toggle-btn-block .sapMFlexItem .footer-toggle-btn:hover .sapMBtnInner {
+  box-shadow: initial !important;
+}
+.page-header .shell-bar .footer-toggle-btn-block .sapMFlexItem .footer-toggle-btn > .sapMBtnInner::before {
+  display: none;
+}
+
+.app-footer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  letter-spacing: 0.5px;
+}
+.app-footer .sapMFlexItem {
+  display: flex;
+  align-items: center;
+}
+.app-footer .footer-item {
+  color: black;
+  font-size: 12px;
+  margin: 0 8px;
+}
+.app-footer .left .useful-link:focus {
+  background-color: white !important;
+  color: #0064d9 !important;
+  text-decoration: underline !important;
+}
+.app-footer .left .useful-link:hover {
+  background-color: white !important;
+  color: #0064d9 !important;
+  text-decoration: underline !important;
+}
+.app-footer .right {
+  padding-right: 16px;
+}
+
+.usermenu-userinfo-tab .usermenu-userinfo-header {
+  box-sizing: border-box;
+  padding-top: 20px;
+}
+
+.sbs-upload-set .sapMIllustratedMessage .sapMIllustratedMessageMainContent .sapMIllustration {
+  height: 8rem !important;
+}
+.sbs-upload-set .sapMIllustratedMessage .sapMIllustratedMessageMainContent > figcaption .sapMTitle {
+  margin-top: 0 !important;
+}
+.sbs-upload-set .sapMIllustratedMessage .sapMIllustratedMessageMainContent > figcaption .sapMText {
+  margin-bottom: 0 !important;
+}
+.sbs-upload-set .sapMIllustratedMessage .sapMIllustratedMessageAdditionalContent {
+  display: none;
+}
+
+.customize-object-dynamic-page .sapFDynamicPageHeader {
+  background: none;
+}
+.customize-object-dynamic-page .sapFDynamicPageContent,
+.customize-object-dynamic-page .sapFDynamicPageHeader,
+.customize-object-dynamic-page .sapUxAPObjectPageHeaderContent,
+.customize-object-dynamic-page .sapFDynamicPageContentFitContainer {
+  padding: 0 !important;
+}
+.customize-object-dynamic-page .sapUxAPObjectPageHeaderTitleTextWrappable {
+  font-size: 1.8rem;
+}
+.customize-object-dynamic-page .sapFDynamicPage {
+  height: calc(100% - 8px);
+  overflow: hidden;
+}
+.customize-object-dynamic-page .sapUxAPObjectPageSection {
+  min-height: 100%;
+  position: relative;
+}
+.customize-object-dynamic-page .sapUxAPObjectPageSection .sapUxAPObjectPageSeRctionContainer {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+.customize-object-dynamic-page .sapUxAPObjectPageSubSection {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+.customize-object-dynamic-page .sapUxAPBlockContainer {
+  height: 100%;
+  position: relative;
+}
+.customize-object-dynamic-page .sapUxAPObjectPageScroll {
+  height: 100%;
+}
+.customize-object-dynamic-page .sapUxAPObjectPageScroll .sapUxAPObjectPageContainer {
+  height: calc(100% - 50px);
+  overflow: hidden;
+}
+.customize-object-dynamic-page .sapUxAPObjectPageSection .sapUiRespGrid {
+  height: 100%;
+}
+.customize-object-dynamic-page .sapUxAPObjectPageSection .sapUiRespGrid > div {
+  height: 100%;
+}
+.customize-object-dynamic-page .sapFDynamicPageContent {
+  background-color: white !important;
+}
+.customize-object-dynamic-page .sapFDynamicPageContent > div {
+  height: 100% !important;
+}
+.customize-object-dynamic-page .sapFDynamicPageContentWrapper {
+  overflow: hidden !important;
+}
+.customize-object-dynamic-page .sapUiViewDisplayBlock {
+  height: 100%;
+}
+
+.page-root {
+  height: initial !important;
+  min-height: 100%;
+}
+
+.sapMPageHeader {
+  display: none;
+}
+
+section[role=main] {
+  top: 0 !important;
+  bottom: 0;
+  transition: bottom 0.4s;
+}
+
+.sapMPageFooter {
+  height: 72px;
+  z-index: 10 !important;
+  background-color: white;
+  transition: height 0.35s;
+}
+.sapMPageFooter div[role=toolbar] {
+  height: 100%;
+  opacity: 1;
+  transition: opacity 0.35s;
+}
+.sapMPageFooter.sapUiHidden {
+  height: 0 !important;
+  bottom: 0 !important;
+  top: initial;
+  visibility: visible;
+}
+.sapMPageFooter.sapUiHidden div[role=toolbar] {
+  opacity: 0;
+}
+
+.sapMPageWithFooter > section[role=main] {
+  bottom: 72px;
+}
+
+.app-content .sapTntToolPageHeader {
+  height: 70px !important;
+}
+.app-content .sapTntToolPageHeader > .sapTntToolHeader {
+  padding: 0 !important;
+  overflow: visible !important;
+}
+.app-content .sapTntToolPageMainContentWrapper .sapMScrollContScroll {
+  height: 100%;
+}
+
+.page-welcome > section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page-welcome .logo-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.page-welcome .logo-block .logo {
+  display: block;
+  -webkit-box-reflect: below -10px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(30%, transparent), to(rgba(250, 250, 250, 0.1)));
+}
+.page-welcome .indicator-block {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+}
+.page-welcome .indicator-block .activity-indicator {
+  height: 72px;
+  width: 72px;
+  position: relative;
+}
+.page-welcome .indicator-block .activity-indicator__top-box {
+  /**
+   * WARNING
+   * This animation breaks easily in IE11 and only on some machines and only some times
+   * Changes require intensive testing
+   * WARNING
+   */
+  animation-name: top-box-animation-default;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none;
+  background-color: #ED0007;
+  position: absolute;
+  height: 33.3333333333%;
+  width: 33.3333333333%;
+  top: 33.3333333333%;
+  left: 33.3333333333%;
+  z-index: 1;
+}
+@keyframes top-box-animation-default {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  12.5% {
+    transform: translate(-24px, 0);
+  }
+  24.99% {
+    background-color: #ED0007;
+    transform: translate(0, 0);
+  }
+  25% {
+    background-color: #007BC0;
+  }
+  37.5% {
+    transform: translate(0, -24px);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+  62.5% {
+    transform: translate(-24px, 0);
+  }
+  74.99% {
+    background-color: #007BC0;
+    transform: translate(0, 0);
+  }
+  75% {
+    background-color: #ED0007;
+  }
+  87.5% {
+    transform: translate(0, -24px);
+  }
+}
+.page-welcome .indicator-block .activity-indicator__bottom-box {
+  /**
+  * WARNING
+  * This animation breaks easily in IE11 and only on some machines and only some times
+  * Changes require intensive testing
+  * WARNING
+  */
+  animation-name: bottom-box-animation-default;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none;
+  background-color: #9E2896;
+  position: absolute;
+  height: 33.3333333333%;
+  width: 33.3333333333%;
+  top: 33.3333333333%;
+  left: 33.3333333333%;
+  z-index: 0;
+}
+@keyframes bottom-box-animation-default {
+  0%, 100% {
+    transform: translate(0, 0);
+    background-color: #9E2896;
+  }
+  12.5% {
+    transform: translate(24px, 0);
+    z-index: 2;
+  }
+  25% {
+    transform: translate(0, 0);
+    z-index: 2;
+  }
+  37.5% {
+    transform: translate(0, 24px);
+    z-index: 0;
+  }
+  49.99% {
+    transform: translate(0, 0);
+    z-index: 0;
+    background-color: #9E2896;
+  }
+  50% {
+    background-color: #00884A;
+  }
+  62.5% {
+    transform: translate(24px, 0);
+    z-index: 2;
+  }
+  75% {
+    transform: translate(0, 0);
+    z-index: 2;
+  }
+  87.5% {
+    transform: translate(0, 24px);
+    z-index: 0;
+  }
+  99.99% {
+    background-color: #00884A;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

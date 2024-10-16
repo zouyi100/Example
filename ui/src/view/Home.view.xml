@@ -1,0 +1,7 @@
+<mvc:View controllerName="com.bosch.Test1016.ui.controller.Home"
+  xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+  <Page showHeader="false" class="pages page-home">
+    <Text text="First User:" />
+    <Text text="{HomeModel>/firstUser/name}" />
+  </Page>
+</mvc:View>

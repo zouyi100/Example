@@ -1,0 +1,142 @@
+.page-header {
+  margin-left: 0 !important;
+  width: 100%;
+  .shell-bar {
+    background-color: #fff;
+    box-shadow: 0px 1px 1px 0px #ccc;
+    padding: 0 5px;
+    z-index: 5;
+    position: initial;
+    .left {
+      margin-left: 4px;
+      .logo {
+        margin-left: 15px;
+        .sapMFlexItem {
+          display: flex;
+          align-items: center;
+        }
+      }
+      .title {
+        margin-left: 60px;
+        span {
+          color: #32363a;
+          font-size: 1.3rem;
+          font-weight: bold;
+        }
+      }
+      .hello {
+        margin-left: 1.5rem;
+        color: #32363a;
+        font-size: 12px;
+      }
+      .menu-bar {
+        border: none;
+        box-shadow: none;
+        .sapMITBText {
+          color: #32363a !important;
+          font-weight: bold;
+          &:hover {
+            color: #32363a;
+          }
+        }
+        .sapMITBSelected {
+          .sapMITBText {
+            color: #d1e8ff !important;
+          }
+          .sapMITBContentArrow {
+            height: 0.7rem !important;
+            &::after {
+              background-color: #d1e8ff !important;
+            }
+          }
+        }
+      }
+    }
+    .right {
+      position: initial;
+      margin-right: 15px;
+      .title {
+        margin-right: 1.5rem;
+        span {
+          color: #32363a;
+          font-size: 1.3rem;
+          font-weight: bold;
+        }
+      }
+      .hello {
+        color: #32363a;
+        font-size: 12px;
+      }
+      .user-menu-btn {
+        margin-left: 10px;
+        .sapUiIcon {
+          color: #32363a;
+        }
+        span {
+          color: #32363a;
+        }
+      }
+    }
+    .customize-btn {
+      &:hover .sapMBtnInner {
+        background-color: #eaeaea !important;
+      }
+      .sapMBtnInner {
+        border-radius: 50% !important;
+        transition: all 0.3s !important;
+        &:hover {
+          background-color: #eaeaea !important;
+        }
+      }
+      > .sapMBtnInner {
+        &::before {
+          display: none;
+        }
+      }
+      .sapUiIcon {
+        color: #333 !important;
+      }
+      span {
+        color: #333 !important;
+      }
+    }
+    .footer-toggle-btn-block {
+      position: absolute;
+      width: 40px;
+      height: 35px;
+      bottom: -1px;
+      right: 5px;
+      border-radius: 5px 5px 0 0;
+      background-color: white;
+      border: 1px solid #d9d9d9;
+      border-bottom: none;
+      box-sizing: border-box;
+      opacity: 0.4;
+      transition: all 0.25s;
+      &:hover {
+        opacity: 1;
+        height: 40px;
+      }
+      .sapMFlexItem {
+        width: 100%;
+        height: 100%;
+        .footer-toggle-btn {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          outline: initial !important;
+          &:hover .sapMBtnInner {
+            box-shadow: initial !important;
+          }
+          > .sapMBtnInner {
+            &::before {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "Test1016",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "npm-run-all build:ts build:ui5",
+    "build:opt": "npm-run-all build:ts build:ui5:opt",
+    "build:ts": "babel src --out-dir webapp --source-maps true --extensions \".ts,.js\" --copy-files",
+    "build:ui5": "ui5 build --clean-dest && npm run zip",
+    "build:ui5:opt": "ui5 build self-contained --clean-dest --all",
+    "start": "npm-run-all --parallel watch:ts start:ui5 sass",
+    "watch:ts": "babel src --out-dir webapp --source-maps true --extensions \".ts,.js\" --copy-files --watch",
+    "start:ui5": "ui5 serve -o index.html",
+    "start:dist": "ui5 serve -o index.html --config ui5-dist.yaml",
+    "ts-typecheck": "tsc --noEmit",
+    "lint": "eslint src --fix",
+    "sass": "sass --source-map -w ./src/sass/style.scss ./src/css/style.css",
+    "zip": "cd dist && npx bestzip ../ui-content.zip *"
+  },
+  "author": "",
+  "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "@babel/preset-typescript": "^7.21.4",
+    "@sapui5/ts-types-esm": "1.128.0",
+    "@types/jquery": "^3.5.16",
+    "@typescript-eslint/eslint-plugin": "^5.59.0",
+    "@typescript-eslint/parser": "^5.59.0",
+    "@ui5/cli": "^3.0.7",
+    "babel-preset-transform-ui5": "^7.1.4",
+    "eslint": "^8.39.0",
+    "sass": "^1.62.0",
+    "npm-run-all": "4.1.5",
+    "typescript": "^5.0.4",
+    "ui5-middleware-livereload": "^0.8.2",
+    "ui5-tooling-modules": "0.9.7"
+  }
+}

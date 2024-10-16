@@ -1,0 +1,188 @@
+@import "../_variables.scss";
+
+.page-welcome {
+  & > section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    .logo {
+      display: block;
+      -webkit-box-reflect: below -10px -webkit-gradient(
+          linear,
+          left top,
+          left bottom,
+          from(transparent),
+          color-stop(30%, transparent),
+          to(rgba(250, 250, 250, 0.1))
+        );
+    }
+  }
+  .indicator-block {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+
+    @mixin top-box-animation-mixin($name, $size) {
+      @keyframes top-box-animation-#{$name} {
+        0%,
+        100% {
+          transform: translate(0, 0);
+        }
+
+        12.5% {
+          transform: translate(#{$size}, 0);
+        }
+
+        24.99% {
+          background-color: $red-50;
+          transform: translate(0, 0);
+        }
+
+        25% {
+          background-color: $blue-50;
+        }
+
+        37.5% {
+          transform: translate(0, #{$size});
+        }
+
+        50% {
+          transform: translate(0, 0);
+        }
+
+        62.5% {
+          transform: translate(#{$size}, 0);
+        }
+
+        74.99% {
+          background-color: $blue-50;
+          transform: translate(0, 0);
+        }
+
+        75% {
+          background-color: $red-50;
+        }
+
+        87.5% {
+          transform: translate(0, #{$size});
+        }
+      }
+    }
+
+    @mixin bottom-box-animation-mixin($name, $size) {
+      @keyframes bottom-box-animation-#{$name} {
+        0%,
+        100% {
+          transform: translate(0, 0);
+          background-color: $purple-40;
+        }
+
+        12.5% {
+          transform: translate(#{$size}, 0);
+          z-index: 2;
+        }
+
+        25% {
+          transform: translate(0, 0);
+          z-index: 2;
+        }
+
+        37.5% {
+          transform: translate(0, #{$size});
+          z-index: 0;
+        }
+
+        49.99% {
+          transform: translate(0, 0);
+          z-index: 0;
+          background-color: $purple-40;
+        }
+
+        50% {
+          background-color: $green-50;
+        }
+
+        62.5% {
+          transform: translate(#{$size}, 0);
+          z-index: 2;
+        }
+
+        75% {
+          transform: translate(0, 0);
+          z-index: 2;
+        }
+
+        87.5% {
+          transform: translate(0, #{$size});
+          z-index: 0;
+        }
+
+        99.99% {
+          background-color: $green-50;
+        }
+      }
+    }
+
+    .activity-indicator {
+      height: 72px;
+      width: 72px;
+      position: relative;
+
+      &__top-box {
+        /**
+         * WARNING
+         * This animation breaks easily in IE11 and only on some machines and only some times
+         * Changes require intensive testing
+         * WARNING
+         */
+        @include top-box-animation-mixin(default, -24px);
+
+        animation-name: top-box-animation-default;
+        animation-duration: 3s;
+        animation-timing-function: ease-in-out;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: none;
+        background-color: $red-50;
+        position: absolute;
+        height: calc(100% / 3);
+        width: calc(100% / 3);
+        top: calc(100% / 3);
+        left: calc(100% / 3);
+        z-index: 1;
+      }
+
+      &__bottom-box {
+        /**
+        * WARNING
+        * This animation breaks easily in IE11 and only on some machines and only some times
+        * Changes require intensive testing
+        * WARNING
+        */
+        @include bottom-box-animation-mixin(default, 24px);
+
+        animation-name: bottom-box-animation-default;
+        animation-duration: 3s;
+        animation-timing-function: ease-in-out;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: none;
+        background-color: $purple-40;
+        position: absolute;
+        height: calc(100% / 3);
+        width: calc(100% / 3);
+        top: calc(100% / 3);
+        left: calc(100% / 3);
+        z-index: 0;
+      }
+    }
+  }
+}

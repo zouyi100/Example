@@ -1,0 +1,60 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:tnt="sap.tnt" xmlns:form="sap.ui.layout.form" xmlns:l="sap.ui.layout">
+  <Dialog id="userProfile" title="User Menu" contentWidth="700px" contentHeight="300px">
+    <endButton>
+      <Button text="Close" press="onUserProfileDialogClose" />
+    </endButton>
+    <content>
+      <tnt:ToolPage id="toolPage">
+        <tnt:sideContent>
+          <tnt:SideNavigation expanded="true" itemSelect="onUserMenuItemSelect">
+            <tnt:NavigationList>
+              <tnt:NavigationListItem text="User Profile" icon="" key="profile"></tnt:NavigationListItem>
+            </tnt:NavigationList>
+          </tnt:SideNavigation>
+        </tnt:sideContent>
+        <tnt:mainContents>
+          <NavContainer id="userMenuContent" initialPage="profile">
+            <pages>
+              <ScrollContainer class="usermenu-userinfo-tab" id="profile" horizontal="false" vertical="true" height="100%">
+                <VBox class="usermenu-userinfo-header" alignItems="Center">
+                  <Avatar class="sapUiTinyMarginBottom" displaySize="L" backgroundColor="TileIcon" press="onPress" />
+                  <Text text="{store>/userName}" />
+                </VBox>
+                <VBox class="usermenu-userinfo-detail">
+                  <form:SimpleForm id="SimpleFormChange354" editable="true" layout="ResponsiveGridLayout" title="Detail" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
+                    <!-- <form:content>
+											<Label text="Name" />
+											<Input id="name" value="{SupplierName}" />
+											<Label text="Street/No." />
+											<Input value="{Street}"></Input>
+											<Input value="{HouseNumber}">
+												<layoutData>
+													<l:GridData span="XL1 L2 M2 S4" />
+												</layoutData>
+											</Input>
+											<Label text="ZIP Code/City" />
+											<Input value="{ZIPCode}">
+												<layoutData>
+													<l:GridData span="XL1 L2 M2 S4" />
+												</layoutData>
+											</Input>
+											<Input value="{City}" />
+											<Label text="Country" />
+											<Select id="country" selectedKey="{Country}">
+												<items>
+													<core:Item text="England" key="England" />
+													<core:Item text="Germany" key="Germany" />
+													<core:Item text="USA" key="USA" />
+												</items>
+											</Select>
+										</form:content> -->
+                  </form:SimpleForm>
+                </VBox>
+              </ScrollContainer>
+            </pages>
+          </NavContainer>
+        </tnt:mainContents>
+      </tnt:ToolPage>
+    </content>
+  </Dialog>
+</core:FragmentDefinition>

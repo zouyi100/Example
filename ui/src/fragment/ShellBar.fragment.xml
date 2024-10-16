@@ -1,0 +1,30 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:tnt="sap.f" xmlns:html="http://www.w3.org/1999/xhtml">
+  <FlexBox alignItems="Center" justifyContent="SpaceBetween" class="shell-bar" height="64px">
+    <FlexBox alignItems="Center" class="left">
+      <FlexBox class="classToggleNavigation" alignItems="Center" justifyContent="Start">
+        <Button class="nav-toggle-btn customize-btn" text="" icon="sap-icon://paging" type="Transparent" press="onToggleNavigationPress" />
+      </FlexBox>
+      <FlexBox class="logo">
+        <Image alt="assets/sapCompanyLogo.svg" src="assets/sapCompanyLogo.svg" height="70px" />
+      </FlexBox>
+      <FlexBox class="title">
+        <Text text="Test1016" />
+      </FlexBox>
+      <!--Text visible="{store>/hasLogin}" class="hello" text="Department"/-->
+    </FlexBox>
+    <FlexBox class="right" alignItems="Center">
+      <Text visible="{store>/hasLogin}" class="hello" text="Hello, {store>/userName}" />
+      <!--Text class="sapUiTinyMargin" text="{store>/salesOrg}"/-->
+      <!-- Button class="i18n-btn" icon="sap-icon://globe" type="Transparent" press="onLanguageSelectDialogShow"/ -->
+      <Button visible="{store>/hasLogin}" class="user-menu-btn customize-btn" text="" icon="sap-icon://employee" type="Transparent" press="showUserMenu">
+        <dependents>
+          <core:Fragment fragmentName="com.bosch.Test1016.ui.fragment.UserMenu" type="XML" />
+          <core:Fragment fragmentName="com.bosch.Test1016.ui.fragment.UserProfile" type="XML" />
+        </dependents>
+      </Button>
+      <FlexBox class="footer-toggle-btn-block">
+        <core:Icon class="footer-toggle-btn" src="{= ${AppModel>/showFooter} ? 'sap-icon://decline' : 'sap-icon://slim-arrow-up'}" press="onToggleFooterbar" useIconTooltip="false"></core:Icon>
+      </FlexBox>
+    </FlexBox>
+  </FlexBox>
+</core:FragmentDefinition>
